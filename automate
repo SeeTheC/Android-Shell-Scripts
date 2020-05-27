@@ -1,0 +1,28 @@
+1. How to get touch locaation:
+
+adb shell getevent -l
+
+ABS_MT_POSITION_X -> X in Hex
+ABS_MT_POSITION_Y -> Y in Hex
+
+Example:
+/dev/input/event3: EV_ABS       ABS_MT_TRACKING_ID   00000899            
+/dev/input/event3: EV_KEY       BTN_TOUCH            DOWN                
+/dev/input/event3: EV_ABS       ABS_MT_WIDTH_MAJOR   0000000b            
+/dev/input/event3: EV_ABS       ABS_MT_POSITION_X    0000021b            
+/dev/input/event3: EV_ABS       ABS_MT_POSITION_Y    00000561            
+/dev/input/event3: EV_SYN       SYN_REPORT           00000000            
+/dev/input/event3: EV_ABS       ABS_MT_TRACKING_ID   ffffffff            
+/dev/input/event3: EV_KEY       BTN_TOUCH            UP                  
+/dev/input/event3: EV_SYN       SYN_REPORT           00000000 
+
+2. How to simulate touch ?
+
+adb shell input tap X Y
+
+X -> Decimal number
+Y -> Decimal number
+
+Example:
+adb shell input tap 563 2070
+
